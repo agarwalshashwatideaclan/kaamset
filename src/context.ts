@@ -6,7 +6,8 @@ import type { Workspace } from './db.ts';
 export type Route = '/' | '/earnings' | '/ask' | '/saved';
 
 /** What another screen hands to Ask: a mode and optionally facts the worker chose to share. */
-export interface AskPreset { mode: Mode; earnings?: EarningsContext; entry?: WorkEntry; nonce: number }
+/** `text` is dictated on Today; with no `mode`, Ask shows the mode list and keeps the text for the chosen mode. */
+export interface AskPreset { mode?: Mode; earnings?: EarningsContext; entry?: WorkEntry; text?: string; nonce: number }
 
 export interface AppContextValue {
   lang: Language;

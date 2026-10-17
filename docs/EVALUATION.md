@@ -95,6 +95,21 @@ Deployed version: `c9c16b58-7457-4316-858d-92e21c4ef0f8`.
 - `grep` of `dist/` for key material: none. The key exists only as a Worker secret.
 - In the browser: the SW registered and controls the page, the only cache is `kaamset-<hash>`, and the manifest is served. Test data was cleared afterwards.
 
+## Attempt 2: voice (Web Speech API)
+
+Built as a purely additive change: `src/speech.ts`, `src/components/MicButton.tsx`, a header toggle, and strings in en/hi/pa. There are no new dependencies and no schema or Worker changes. `public/_headers` now sends `microphone=(self)` (it was `microphone=()`, which blocked the mic).
+- `npm run check`: pass (15/15 unit/API tests, lint clean). JS is 119.2 KB gzip, up from 117.2 KB.
+- Playwright: **16/16**. The new `tests/e2e/voice.spec.ts` covers:
+  - dictation filling the textarea with `en-IN` recognition;
+  - one spoken answer (title + answer);
+  - the read-aloud toggle with `aria-pressed`, persisted across reload;
+  - axe on Ask with the mic present;
+  - a denied mic showing the error while typing still works;
+  - Hindi UI dictation on Today opening Ask with the text, using `hi-IN`.
+  These use injected fake speech APIs. Chromium now exposes unprefixed `SpeechRecognition`, so the test stubs both names.
+- Staging `kaamset-next`, fresh browser: add work (₹720/₹300), explain earnings (16.0 s, a cold first call), grievance draft (3.3 s, ₹300), safety in Punjabi (3.9 s, mic button visible), offline reopen. All passed.
+- **Real-device dictation:** see the phone check result below.
+
 ## Not tested / limitations
 
 - **Android installation: not verified.** On the Android emulator (Pixel 6 AVD, API 34, Chrome 113), the public URL loaded over HTTPS and rendered the Today screen. The service-worker update banner ("A new version is ready") appeared after a redeploy. Chrome 113 on the emulator then crashed repeatedly in its GPU process (`CompositorGpuThread` SIGSEGV, also with `--disable-gpu`), so the "Install app" flow could not be exercised. Not tested on a physical device. Manifest fields, icon sizes (192/512/maskable) and SW control were verified in desktop Chromium.

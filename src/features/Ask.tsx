@@ -9,6 +9,8 @@ import { askAssistant, AskError } from '../api.ts';
 import { useApp } from '../context.ts';
 import { Field } from '../components/ui.tsx';
 import { AnswerView } from '../components/AnswerView.tsx';
+import { MicButton } from '../components/MicButton.tsx';
+import { speak } from '../speech.ts';
 import { MODE_META } from './Today.tsx';
 
 type Focus = NonNullable<AssistantRequest['focus']>;
@@ -35,6 +37,7 @@ export function Ask() {
   const [shareTotals, setShareTotals] = useState(false);
   const [linked, setLinked] = useState<{ entry: WorkEntry; facts: EarningsContext } | null>(null);
   const [turns, setTurns] = useState<Turn[]>([]);
+  const [pendingText, setPendingText] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<MessageKey | null>(null);
   const abortRef = useRef<AbortController | null>(null);
@@ -46,7 +49,10 @@ export function Ask() {
   useEffect(() => {
     if (!askPreset || askPreset.nonce === handledPreset) return;
     handledPreset = askPreset.nonce;
-    reset(askPreset.mode);
+    reset(askPreset.mode ?? null);
+    if (askPreset.text) {
+      if (askPreset.mode) setMessage(askPreset.text); else setPendingText(askPreset.text);
+    }
     if (askPreset.mode === 'earnings' && askPreset.earnings) setShareTotals(true);
     if (askPreset.mode === 'grievance' && askPreset.entry && askPreset.earnings) {
       setLinked({ entry: askPreset.entry, facts: askPreset.earnings });
@@ -118,6 +124,7 @@ export function Ask() {
       if (controller.signal.aborted) return;
       setTurns(prev => [...prev, { id: crypto.randomUUID(), question: message.trim() || question, response }]);
       setMessage('');
+      speak(`${response.title}. ${response.answer}`, response.language);
       requestAnimationFrame(() => resultRef.current?.lastElementChild?.querySelector('h2')?.focus());
     } catch (err) {
       if (controller.signal.aborted) return;
@@ -132,12 +139,13 @@ export function Ask() {
       <section className="screen">
         <h1 tabIndex={-1}>{t('askTitle')}</h1>
         <p className="lede">{t('chooseMode')}</p>
+        {pendingText && <p className="facts"><span className="sr-only">{t('youAsked')}: </span>“{pendingText}”</p>}
         <ul className="task-list">
           {MODES.map(m => {
             const { title, body, Icon } = MODE_META[m];
             return (
               <li key={m}>
-                <button type="button" className="task" onClick={() => reset(m)}>
+                <button type="button" className="task" onClick={() => { reset(m); if (pendingText) { setMessage(pendingText); setPendingText(''); } }}>
                   <Icon aria-hidden="true" size={26} />
                   <span><strong>{t(title)}</strong><span className="task-body">{t(body)}</span></span>
                 </button>
@@ -259,6 +267,7 @@ export function Ask() {
               placeholder={placeholder ? t(placeholder) : undefined} onChange={e => setMessage(e.target.value)} />
           )}
         </Field>
+        <MicButton onText={text => setMessage(prev => (prev ? `${prev} ${text}` : text).slice(0, 1200))} />
 
         <p className="hint">{t('privacyNote')}</p>
 

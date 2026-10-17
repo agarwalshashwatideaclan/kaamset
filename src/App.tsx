@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { CalendarDays, MessageCircleQuestion, Bookmark, Wallet } from 'lucide-react';
+import { CalendarDays, MessageCircleQuestion, Bookmark, Wallet, Volume2, VolumeX } from 'lucide-react';
+import { readAloudEnabled, setReadAloud, stopSpeaking } from './speech.ts';
 import type { Checklist, Draft, Language, Profile, WorkEntry } from '../shared/domain.ts';
 import { LANGUAGES } from '../shared/domain.ts';
 import * as db from './db.ts';
@@ -38,6 +39,8 @@ export default function App() {
   const [addWorkRequest, setAddWorkRequest] = useState<number>();
   const [installEvent, setInstallEvent] = useState<InstallEvent | null>(null);
   const [updateReady, setUpdateReady] = useState(false);
+  const [readAloud, setReadAloudState] = useState(readAloudEnabled);
+  const [speaking, setSpeaking] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
   const t = useMemo(() => translator(lang), [lang]);
 
@@ -51,6 +54,10 @@ export default function App() {
     const onOffline = () => setOnline(false);
     const onInstall = (e: Event) => { e.preventDefault(); setInstallEvent(e as InstallEvent); };
     const onUpdate = () => setUpdateReady(true);
+    const onSpeaking = (e: Event) => setSpeaking((e as CustomEvent<boolean>).detail);
+    // Chrome loads synthesis voices lazily; asking early makes them ready by the first answer.
+    if ('speechSynthesis' in window) speechSynthesis.getVoices();
+    addEventListener('kaamset:speaking', onSpeaking);
     addEventListener('popstate', onPop);
     addEventListener('online', onOnline);
     addEventListener('offline', onOffline);
@@ -62,6 +69,7 @@ export default function App() {
       removeEventListener('offline', onOffline);
       removeEventListener('beforeinstallprompt', onInstall);
       removeEventListener('kaamset:update', onUpdate);
+      removeEventListener('kaamset:speaking', onSpeaking);
     };
   }, []);
 
@@ -133,6 +141,11 @@ export default function App() {
           <a href="/" className="brand" onClick={e => { e.preventDefault(); navigate('/'); }}>
             <img src="/icons/icon.svg" alt="" width="28" height="28" /> KaamSet
           </a>
+          <div className="topbar-actions">
+          <button type="button" className="icon-toggle" aria-pressed={readAloud} aria-label={t('readAloud')} title={t('readAloud')}
+            onClick={() => { const next = !readAloud; setReadAloud(next); setReadAloudState(next); if (!next) stopSpeaking(); }}>
+            {readAloud ? <Volume2 aria-hidden="true" size={22} /> : <VolumeX aria-hidden="true" size={22} />}
+          </button>
           <label className="lang-select">
             <span className="sr-only">{t('language')}</span>
             <select value={lang} onChange={e => setLang(e.target.value as Language)}>
@@ -141,8 +154,14 @@ export default function App() {
               <option value="pa" lang="pa">ਪੰਜਾਬੀ</option>
             </select>
           </label>
+          </div>
         </header>
 
+        {speaking && (
+          <p className="banner banner-speaking">
+            <button type="button" className="btn btn-small" onClick={stopSpeaking}><VolumeX aria-hidden="true" size={20} /> {t('stopSpeaking')}</button>
+          </p>
+        )}
         {!online && <p className="banner banner-offline" role="status">{t('offline')}</p>}
         {storageBroken && <p className="banner banner-error" role="alert">{t('storageUnavailable')}</p>}
         {value.ws.unreadable > 0 && <p className="banner banner-error" role="alert">{t('unreadableRecords')}</p>}

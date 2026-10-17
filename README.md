@@ -10,6 +10,8 @@ A mobile-first, multilingual (English · हिन्दी · ਪੰਜਾਬ�
 | **Document help** | Pastes a passage or names a task | An explanation, or a checklist marking items as "Required" (only when a source says so) or "Suggested" |
 | **Grievance drafting** | Describes the problem, or starts from an unpaid work record | An editable, factual draft with `[placeholders]` plus an evidence checklist. Never sent automatically |
 
+**Voice (optional):** a mic button on Ask and Today dictates in the UI language (`en-IN`/`hi-IN`/`pa-IN`) through the browser's Web Speech API. Answers are read aloud with `speechSynthesis` when the device has a matching voice. A header toggle turns reading aloud off (saved in this browser), and a "Stop speaking" bar appears while it talks. The controls are hidden where the browser lacks the API, and typing always works.
+
 **Live:** https://kaamset.shashwat-5f0.workers.dev. No login or API key is needed.
 **Docs:** [Evaluation](docs/EVALUATION.md) · [Submission notes](docs/SUBMISSION.md)
 
@@ -92,4 +94,5 @@ npm run deploy
 - Safety guidance outside the NDMA heat note is general practical advice from Gemini, not an official safety standard.
 - AI output can still be wrong. Answers are labelled as AI guidance, and the worker is asked to check important facts.
 - Android installation is not verified. On an emulator (Chrome 113) the app loaded and rendered, but Chrome crashed in its GPU process before the install flow could run. It has not been tested on a physical device. See `docs/EVALUATION.md`.
-- Out of scope: login, cloud sync, uploads/OCR, voice, sending complaints, payments.
+- Voice depends on the browser. Chrome's speech recognition sends audio to the browser vendor's speech service, and the UI says so. Punjabi recognition and Hindi/Punjabi synthesis voices vary by device; with no matching voice the app stays silent.
+- Out of scope: login, cloud sync, uploads/OCR, sending complaints, payments.

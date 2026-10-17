@@ -55,6 +55,14 @@ a { color: var(--primary-press); }
   background: var(--bg); border-bottom: 1px solid var(--line);
 }
 .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.125rem; color: var(--ink); text-decoration: none; min-height: 48px; }
+.topbar-actions { display: flex; align-items: center; gap: 8px; }
+.icon-toggle { min-width: 48px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid #8B877C; border-radius: 12px; background: var(--surface); color: var(--ink); cursor: pointer; }
+.icon-toggle[aria-pressed="false"] { color: var(--muted); }
+.mic { margin: 4px 0 8px; }
+.mic-button.listening { background: var(--err-bg); border-color: var(--err-ink); color: var(--err-ink); }
+.mic-status { min-height: 1.5em; margin: 6px 0 0; font-weight: 600; }
+.mic .hint { margin: 2px 0 0; font-size: 0.875rem; }
+.banner-speaking { background: var(--ok-bg); color: var(--ok-ink); padding: 6px 16px; }
 .lang-select select { min-height: 44px; font-size: 1rem; padding: 6px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
 
 main { padding: 16px; }
