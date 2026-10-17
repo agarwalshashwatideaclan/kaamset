@@ -78,7 +78,7 @@ printf %s "$GEMINI_API_KEY" | npx wrangler secret put GEMINI_API_KEY
 npm run deploy
 ```
 
-`wrangler.jsonc` sets `run_worker_first: ["/api", "/api/*"]`, so API paths never fall through to `index.html`. It also declares a `ratelimits` binding: 8 AI requests per 60 s per client IP, **per Cloudflare location**. This limit is best-effort abuse control, **not a global spending cap**. Set a quota or budget on the Gemini API key in Google Cloud for that. `GEMINI_MODEL` is a plain variable (default `gemini-2.5-flash`). The key exists only as a Worker secret and is never in the frontend bundle.
+`wrangler.jsonc` sets `run_worker_first: ["/api", "/api/*"]`, so API paths never fall through to `index.html`. It also declares a `ratelimits` binding: 20 AI requests per 60 s per client IP, **per Cloudflare location**. This limit is best-effort abuse control, **not a global spending cap**. Set a quota or budget on the Gemini API key in Google Cloud for that. `GEMINI_MODEL` is a plain variable (default `gemini-2.5-flash`). The key exists only as a Worker secret and is never in the frontend bundle.
 
 ## Privacy and offline behaviour
 

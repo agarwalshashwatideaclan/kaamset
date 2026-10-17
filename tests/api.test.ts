@@ -119,6 +119,11 @@ test('Gemini adapter validates provider output strictly', async () => {
   await rejects(generateAnswer(req(), cfg(gemini(candidate(JSON.stringify({ ...answer(), title: '' }))))), 'invalid_output');
   await rejects(generateAnswer(req({ language: 'hi' }), cfg(gemini(candidate(JSON.stringify(answer({ language: 'hi' })))))), 'invalid_output');
   await rejects(generateAnswer(req({ mode: 'grievance' }), cfg(gemini(candidate(JSON.stringify(answer()))))), 'invalid_output');
+  const followUp = await generateAnswer(
+    req({ mode: 'grievance', history: [{ role: 'user', text: 'Draft it' }, { role: 'assistant', text: 'Dear Support…' }] }),
+    cfg(gemini(candidate(JSON.stringify(answer({ answer: 'Keep the payment screenshot.' }))))),
+  );
+  assert.equal(followUp.draft, '', 'a follow-up question may be answered without a new draft');
   const timeout: typeof fetch = async (_u, init) => new Promise((_r, reject) => init?.signal?.addEventListener('abort', () => reject(init.signal!.reason)));
   await rejects(generateAnswer(req(), { apiKey: 'k', fetchImpl: timeout, timeoutMs: 20 }), 'timeout');
 

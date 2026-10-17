@@ -128,6 +128,7 @@ export function checkSemantics(answer: Answer, req: AssistantRequest): Answer {
   const allowed = new Set(sourcesForMode(req.mode).map(s => s.id));
   const sourceIds = [...new Set(answer.sourceIds)].filter(id => allowed.has(id));
   const draft = req.mode === 'grievance' ? answer.draft.trim() : '';
-  if (req.mode === 'grievance' && answer.status === 'answered' && !draft) throw new ProviderError('invalid_output');
+  // Follow-up turns may answer a question about the draft without rewriting it.
+  if (req.mode === 'grievance' && req.history.length === 0 && answer.status === 'answered' && !draft) throw new ProviderError('invalid_output');
   return { ...answer, sourceIds, draft };
 }

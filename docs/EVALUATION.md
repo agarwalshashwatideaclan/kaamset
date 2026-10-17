@@ -22,9 +22,9 @@ Everything below was actually run on 17 Oct 2026 against this repository. Anythi
 | --- | --- |
 | `npm run typecheck` (tsc 7.0.2, strict) | pass, 0 errors |
 | `npm run lint` (Biome 2.5.15, recommended preset) | pass, 0 diagnostics |
-| `npm test` | **15/15 pass**: 7 domain tests, 8 Worker/API/Gemini-adapter tests |
+| `npm test` | **15/15 pass** (the adapter test also covers grievance follow-ups): 7 domain tests, 8 Worker/API/Gemini-adapter tests |
 | `npm run build` | pass. JS 117 KB gzip, CSS 2.9 KB gzip, `sw.js` 1.3 KB |
-| `npx wrangler deploy --dry-run` | pass. Bindings: `AI_LIMITER` (rate limit), `ASSETS`, `GEMINI_MODEL` |
+| `npx wrangler deploy --dry-run` | pass. Bindings: `AI_LIMITER` (rate limit, 20/min), `ASSETS`, `GEMINI_MODEL` |
 | `npx playwright test` (Pixel 7 profile, local `wrangler dev` serving the production build) | **14/14 pass** |
 | `npm audit` | 0 vulnerabilities |
 
@@ -79,11 +79,15 @@ Run 1: 9 calls through the local Workers runtime (`wrangler dev`) with the real 
 - Earnings explanation (en): exact totals.
 - Grievance from a record (hi): requests ₹300, includes `[आपका नाम]` and `[आपकी ID]` placeholders, saved, then persisted after a deep-link reload to `/saved`.
 
-Coverage actually exercised: all 5 modes, all 3 languages, 13 live generations in total. Not every mode × language combination was run.
+**Follow-up turns** (fix: a grievance draft is now required only on the first turn): two live calls via `wrangler dev`. "Make the draft shorter" → a shorter draft, still ₹300, placeholders kept. "What proof should I keep?" → a useful evidence answer. **Pass.**
+
+Coverage actually exercised: all 5 modes, all 3 languages, 15 live generations in total. Not every mode × language combination was run.
 
 Observed Gemini latency: 2.3–6.6 s.
 
 ## Deployment checks (https://kaamset.shashwat-5f0.workers.dev)
+
+Deployed version: `c9c16b58-7457-4316-858d-92e21c4ef0f8`.
 
 - `GET /api/health` → `{"ok":true,"aiConfigured":true,"model":"gemini-2.5-flash"}`.
 - `/earnings` deep link → 200 HTML. `/api`, `/api/missing` (with and without `Sec-Fetch-Mode: navigate`) → JSON 404. A foreign-origin POST → 403.

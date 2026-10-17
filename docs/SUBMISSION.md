@@ -28,7 +28,7 @@ KaamSet is a phone-first assistant for delivery partners, drivers and daily-wage
   - one model call per button press, with no streaming or background calls;
   - input limited to 1,500 characters and 16 KB per request;
   - 45-second timeout;
-  - a Cloudflare rate limit of 8 requests/min per IP per location.
+  - a Cloudflare rate limit of 20 requests/min per IP per location.
 
 ## Demo script (about 4 minutes)
 

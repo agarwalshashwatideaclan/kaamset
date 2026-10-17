@@ -15,3 +15,6 @@ MAIN_CHALLENGE_PLAN.md
 starter-kit/
 docs/MAIN_CHALLENGE_DEVELOPER_DELTA.md
 docs/DEMO_VIDEO_PLAN.md
+.playwright-mcp/
+video/kaamset-demo/captures/
+video/kaamset-demo/output/

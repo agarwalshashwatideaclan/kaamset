@@ -14,6 +14,6 @@
   },
   "vars": { "GEMINI_MODEL": "gemini-2.5-flash" },
   "ratelimits": [
-    { "name": "AI_LIMITER", "namespace_id": "4711", "simple": { "limit": 8, "period": 60 } }
+    { "name": "AI_LIMITER", "namespace_id": "4711", "simple": { "limit": 20, "period": 60 } }
   ]
 }
