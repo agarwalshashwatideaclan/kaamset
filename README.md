@@ -82,22 +82,6 @@ npm run deploy
 
 `wrangler.jsonc` sets `run_worker_first: ["/api", "/api/*"]`, so API paths never fall through to `index.html`. It also declares a `ratelimits` binding: 20 AI requests per 60 s per client IP, **per Cloudflare location**. This limit is best-effort abuse control, **not a global spending cap**. Set a quota or budget on the Gemini API key in Google Cloud for that. `GEMINI_MODEL` is a plain variable (default `gemini-2.5-flash`). The key exists only as a Worker secret and is never in the frontend bundle.
 
-## Security
-
-Threat model, controls and the test that proves each one are in [SECURITY.md](SECURITY.md). In short: the Gemini key
-is a Worker secret, every request and every model response is schema-validated, model text is rendered as text under a
-strict CSP, sources are server-owned, and the Worker stores nothing.
-
-## Efficiency
-
-- Production JS is 119 KB gzipped (CSS 3.3 KB) with four runtime dependencies; assets are content-hashed and cached
-  for a year, `sw.js` is `no-cache` so updates land on the next visit.
-- One Gemini call per explicit user action, no streaming or background calls, `thinkingBudget: 0`, a 45 s timeout and
-  a 1,500-character input cap keep latency and cost bounded (2–4 s typical on `gemini-2.5-flash`, see
-  `docs/EVALUATION.md`).
-- Totals, filters and CSV export are computed locally from IndexedDB, so the ledger works offline and never waits
-  on the network.
-
 ## Privacy and offline behaviour
 
 - Records, drafts, checklists and profile stay in this browser's IndexedDB. There is no account and no cloud sync. Saved data is not encrypted, so anyone using the same browser profile can see it. Saved → "Delete all my data" removes it, and "Export" downloads JSON/CSV.
