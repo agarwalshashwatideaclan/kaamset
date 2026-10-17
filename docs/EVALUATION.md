@@ -100,7 +100,7 @@ Deployed version: `c9c16b58-7457-4316-858d-92e21c4ef0f8`.
 Built as a purely additive change: `src/speech.ts`, `src/components/MicButton.tsx`, a header toggle, and strings in en/hi/pa. There are no new dependencies and no schema or Worker changes. `public/_headers` now sends `microphone=(self)` (it was `microphone=()`, which blocked the mic).
 - `npm run check`: pass (15/15 unit/API tests, lint clean). JS is 119.2 KB gzip, up from 117.2 KB.
 - Playwright: **16/16**. The new `tests/e2e/voice.spec.ts` covers:
-  - dictation filling the textarea with `en-IN` recognition;
+  - the centre nav mic showing the "Recording your voice" sheet (`aria-pressed`) and filling the textarea with `en-IN` recognition;
   - one spoken answer (title + answer);
   - the read-aloud toggle with `aria-pressed`, persisted across reload;
   - axe on Ask with the mic present;
@@ -108,7 +108,7 @@ Built as a purely additive change: `src/speech.ts`, `src/components/MicButton.ts
   - Hindi UI dictation on Today opening Ask with the text, using `hi-IN`.
   These use injected fake speech APIs. Chromium now exposes unprefixed `SpeechRecognition`, so the test stubs both names.
 - Staging `kaamset-next`, fresh browser: add work (₹720/₹300), explain earnings (16.0 s, a cold first call), grievance draft (3.3 s, ₹300), safety in Punjabi (3.9 s, mic button visible), offline reopen. All passed.
-- **Real-device dictation:** see the phone check result below.
+- **Real-device dictation:** the user confirmed Hindi dictation works on their Android phone with the first build. Their feedback (no recording indicator; the mic scrolled out of view) led to the centre nav mic and the recording sheet. The sheet was checked at 320 and 390 px in emulation.
 
 ## Not tested / limitations
 

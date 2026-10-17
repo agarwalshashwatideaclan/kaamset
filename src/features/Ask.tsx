@@ -9,7 +9,6 @@ import { askAssistant, AskError } from '../api.ts';
 import { useApp } from '../context.ts';
 import { Field } from '../components/ui.tsx';
 import { AnswerView } from '../components/AnswerView.tsx';
-import { MicButton } from '../components/MicButton.tsx';
 import { speak } from '../speech.ts';
 import { MODE_META } from './Today.tsx';
 
@@ -44,6 +43,16 @@ export function Ask() {
   const resultRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => () => abortRef.current?.abort(), []);
+
+  useEffect(() => {
+    const onDictation = (e: Event) => {
+      const text = (e as CustomEvent<string>).detail;
+      if (mode) setMessage(prev => (prev ? `${prev} ${text}` : text).slice(0, 1200));
+      else setPendingText(text);
+    };
+    addEventListener('kaamset:dictation', onDictation);
+    return () => removeEventListener('kaamset:dictation', onDictation);
+  }, [mode]);
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: runs once per new preset nonce, not on every render.
   useEffect(() => {
@@ -267,7 +276,6 @@ export function Ask() {
               placeholder={placeholder ? t(placeholder) : undefined} onChange={e => setMessage(e.target.value)} />
           )}
         </Field>
-        <MicButton onText={text => setMessage(prev => (prev ? `${prev} ${text}` : text).slice(0, 1200))} />
 
         <p className="hint">{t('privacyNote')}</p>
 

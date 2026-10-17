@@ -5,7 +5,6 @@ import { LANGUAGE_LABEL, type MessageKey } from '../i18n.ts';
 import { LANGUAGES } from '../../shared/domain.ts';
 import { useApp } from '../context.ts';
 import { SummaryGrid } from '../components/ui.tsx';
-import { MicButton } from '../components/MicButton.tsx';
 
 export const MODE_META: Record<Mode, { title: MessageKey; body: MessageKey; Icon: LucideIcon }> = {
   earnings: { title: 'modeEarnings', body: 'modeEarningsBody', Icon: Wallet },
@@ -67,7 +66,6 @@ export function Today() {
       </div>
 
       <h2>{t('tasksTitle')}</h2>
-      <MicButton label="micAsk" onText={text => openAsk({ text })} />
       <ul className="task-list">
         {(Object.keys(MODE_META) as Mode[]).map(mode => {
           const { title, body, Icon } = MODE_META[mode];

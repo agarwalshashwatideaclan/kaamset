@@ -105,7 +105,7 @@ const en = {
   storageUnavailable: 'This browser cannot store data (private mode or storage blocked). Records will not be kept.',
   unreadableRecords: 'Some saved records could not be read. They were kept untouched on this device.',
   loading: 'Loading…',
-  micStart: 'Speak instead', micAsk: 'Speak a question', micStop: 'Stop listening', micListening: 'Listening… speak now.',
+  micNav: 'Speak', micAsk: 'Speak a question', micRecording: 'Recording your voice', micStop: 'Stop listening', micListening: 'Listening… speak now.',
   micDenied: 'Microphone permission was denied. You can type instead.', micError: 'Could not hear that. Try again or type.',
   micNote: 'Voice typing uses your browser’s speech service.', readAloud: 'Read answers aloud', stopSpeaking: 'Stop speaking',
 
@@ -227,7 +227,7 @@ const hi: Record<MessageKey, string> = {
   storageUnavailable: 'यह ब्राउज़र डेटा नहीं रख सकता (प्राइवेट मोड या स्टोरेज बंद)। हिसाब सेव नहीं रहेगा।',
   unreadableRecords: 'कुछ सेव रिकॉर्ड पढ़े नहीं जा सके। उन्हें इस डिवाइस पर बिना बदले रखा गया है।',
   loading: 'लोड हो रहा है…',
-  micStart: 'बोलकर लिखें', micAsk: 'बोलकर पूछें', micStop: 'सुनना बंद करें', micListening: 'सुन रहा है… अब बोलें।',
+  micNav: 'बोलें', micAsk: 'बोलकर पूछें', micRecording: 'आपकी आवाज़ रिकॉर्ड हो रही है', micStop: 'सुनना बंद करें', micListening: 'सुन रहा है… अब बोलें।',
   micDenied: 'माइक्रोफ़ोन की अनुमति नहीं मिली। आप लिखकर पूछ सकते हैं।', micError: 'आवाज़ सुनाई नहीं दी। फिर कोशिश करें या लिखें।',
   micNote: 'बोलकर लिखना आपके ब्राउज़र की स्पीच सेवा से होता है।', readAloud: 'जवाब पढ़कर सुनाएँ', stopSpeaking: 'बोलना बंद करें',
 
@@ -347,7 +347,7 @@ const pa: Record<MessageKey, string> = {
   storageUnavailable: 'ਇਹ ਬ੍ਰਾਊਜ਼ਰ ਡਾਟਾ ਨਹੀਂ ਰੱਖ ਸਕਦਾ (ਪ੍ਰਾਈਵੇਟ ਮੋਡ ਜਾਂ ਸਟੋਰੇਜ ਬੰਦ)। ਹਿਸਾਬ ਸੰਭਾਲਿਆ ਨਹੀਂ ਰਹੇਗਾ।',
   unreadableRecords: 'ਕੁਝ ਸੰਭਾਲੇ ਰਿਕਾਰਡ ਪੜ੍ਹੇ ਨਹੀਂ ਜਾ ਸਕੇ। ਉਹਨਾਂ ਨੂੰ ਇਸ ਡਿਵਾਈਸ ’ਤੇ ਬਿਨਾਂ ਬਦਲੇ ਰੱਖਿਆ ਗਿਆ ਹੈ।',
   loading: 'ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…',
-  micStart: 'ਬੋਲ ਕੇ ਲਿਖੋ', micAsk: 'ਬੋਲ ਕੇ ਪੁੱਛੋ', micStop: 'ਸੁਣਨਾ ਬੰਦ ਕਰੋ', micListening: 'ਸੁਣ ਰਿਹਾ ਹੈ… ਹੁਣ ਬੋਲੋ।',
+  micNav: 'ਬੋਲੋ', micAsk: 'ਬੋਲ ਕੇ ਪੁੱਛੋ', micRecording: 'ਤੁਹਾਡੀ ਆਵਾਜ਼ ਰਿਕਾਰਡ ਹੋ ਰਹੀ ਹੈ', micStop: 'ਸੁਣਨਾ ਬੰਦ ਕਰੋ', micListening: 'ਸੁਣ ਰਿਹਾ ਹੈ… ਹੁਣ ਬੋਲੋ।',
   micDenied: 'ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਮਿਲੀ। ਤੁਸੀਂ ਲਿਖ ਕੇ ਪੁੱਛ ਸਕਦੇ ਹੋ।', micError: 'ਆਵਾਜ਼ ਸੁਣਾਈ ਨਹੀਂ ਦਿੱਤੀ। ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਲਿਖੋ।',
   micNote: 'ਬੋਲ ਕੇ ਲਿਖਣਾ ਤੁਹਾਡੇ ਬ੍ਰਾਊਜ਼ਰ ਦੀ ਸਪੀਚ ਸੇਵਾ ਨਾਲ ਹੁੰਦਾ ਹੈ।', readAloud: 'ਜਵਾਬ ਪੜ੍ਹ ਕੇ ਸੁਣਾਓ', stopSpeaking: 'ਬੋਲਣਾ ਬੰਦ ਕਰੋ',
 

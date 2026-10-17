@@ -10,7 +10,7 @@ A mobile-first, multilingual (English · हिन्दी · ਪੰਜਾਬ�
 | **Document help** | Pastes a passage or names a task | An explanation, or a checklist marking items as "Required" (only when a source says so) or "Suggested" |
 | **Grievance drafting** | Describes the problem, or starts from an unpaid work record | An editable, factual draft with `[placeholders]` plus an evidence checklist. Never sent automatically |
 
-**Voice (optional):** a mic button on Ask and Today dictates in the UI language (`en-IN`/`hi-IN`/`pa-IN`) through the browser's Web Speech API. Answers are read aloud with `speechSynthesis` when the device has a matching voice. A header toggle turns reading aloud off (saved in this browser), and a "Stop speaking" bar appears while it talks. The controls are hidden where the browser lacks the API, and typing always works.
+**Voice (optional):** a mic button in the centre of the bottom navigation dictates in the UI language (`en-IN`/`hi-IN`/`pa-IN`) through the browser's Web Speech API. While it listens, a recording sheet with a pulsing mic and a Stop button makes clear the voice is being recorded. On Ask the words go into the open question box; elsewhere Ask opens with them ready. Answers are read aloud with `speechSynthesis` when the device has a matching voice. A header toggle turns reading aloud off (saved in this browser), and a "Stop speaking" bar appears while it talks. The controls are hidden where the browser lacks the API, and typing always works.
 
 **Live:** https://kaamset.shashwat-5f0.workers.dev. No login or API key is needed.
 **Docs:** [Evaluation](docs/EVALUATION.md) · [Submission notes](docs/SUBMISSION.md)

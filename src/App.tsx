@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { CalendarDays, MessageCircleQuestion, Bookmark, Wallet, Volume2, VolumeX } from 'lucide-react';
 import { readAloudEnabled, setReadAloud, stopSpeaking } from './speech.ts';
 import type { Checklist, Draft, Language, Profile, WorkEntry } from '../shared/domain.ts';
@@ -9,6 +9,7 @@ import { AppContext, type AppContextValue, type AskPreset, type Route } from './
 import { Today } from './features/Today.tsx';
 import { Earnings } from './features/Earnings.tsx';
 import { Ask } from './features/Ask.tsx';
+import { NavMic } from './components/MicButton.tsx';
 import { Saved } from './features/Saved.tsx';
 
 const ROUTES: Route[] = ['/', '/earnings', '/ask', '/saved'];
@@ -184,12 +185,21 @@ export default function App() {
         </div>
 
         <nav className="tabbar" aria-label={t('mainNav')}>
-          {tabs.map(({ route: r, label, Icon }) => (
-            <a key={r} href={r} className="tab" aria-current={route === r ? 'page' : undefined}
-              onClick={e => { e.preventDefault(); navigate(r); }}>
-              <Icon aria-hidden="true" size={24} strokeWidth={route === r ? 2.4 : 1.8} />
-              <span>{t(label)}</span>
-            </a>
+          {tabs.map(({ route: r, label, Icon }, i) => (
+            <Fragment key={r}>
+              {i === 2 && (
+                <NavMic onText={text => {
+                  // On Ask the open question box takes the words; elsewhere Ask opens with them ready.
+                  if (route === '/ask') dispatchEvent(new CustomEvent('kaamset:dictation', { detail: text }));
+                  else value.openAsk({ text });
+                }} />
+              )}
+              <a href={r} className="tab" aria-current={route === r ? 'page' : undefined}
+                onClick={e => { e.preventDefault(); navigate(r); }}>
+                <Icon aria-hidden="true" size={24} strokeWidth={route === r ? 2.4 : 1.8} />
+                <span>{t(label)}</span>
+              </a>
+            </Fragment>
           ))}
         </nav>
       </div>

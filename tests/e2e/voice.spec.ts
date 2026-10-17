@@ -19,7 +19,7 @@ test.beforeEach(async ({ page }) => {
           if (w.__micMode === 'deny') this.onerror?.({ error: 'not-allowed' });
           else this.onresult?.({ results: [[{ transcript: w.__transcript }]] });
           this.onend?.();
-        }, 50);
+        }, 600);
       }
       abort() { this.onend?.(); }
     }
@@ -46,8 +46,12 @@ test.beforeEach(async ({ page }) => {
 test('dictation fills the question, the answer is spoken once, and Stop/quiet controls work', async ({ page }) => {
   await page.goto('/ask');
   await page.getByRole('button', { name: /Stay safe at work/ }).click();
-  await page.getByRole('button', { name: 'Speak instead' }).click();
+  const mic = page.getByRole('navigation').getByRole('button', { name: 'Speak a question' });
+  await mic.click();
+  await expect(page.getByText('Recording your voice')).toBeVisible();
+  await expect(mic).toHaveAttribute('aria-pressed', 'true');
   await expect(page.getByLabel('Describe your situation')).toHaveValue('Riding in heavy rain tonight');
+  await expect(page.getByText('Recording your voice')).toBeHidden();
   expect(await page.evaluate(() => (window as unknown as { __lastLang: string }).__lastLang)).toBe('en-IN');
 
   await page.getByRole('button', { name: 'Get help' }).click();
@@ -69,7 +73,7 @@ test('mic denied shows an error and typing still works; Hindi UI listens in hi-I
   await page.goto('/ask');
   await page.evaluate(() => { (window as unknown as { __micMode: string }).__micMode = 'deny'; });
   await page.getByRole('button', { name: /Rights & welfare/ }).click();
-  await page.getByRole('button', { name: 'Speak instead' }).click();
+  await page.getByRole('navigation').getByRole('button', { name: 'Speak a question' }).click();
   await expect(page.getByText('Microphone permission was denied. You can type instead.')).toBeVisible();
   await page.getByLabel('Your question').fill('How do I register on e-Shram?');
   await page.getByRole('button', { name: 'Get help' }).click();
@@ -78,7 +82,7 @@ test('mic denied shows an error and typing still works; Hindi UI listens in hi-I
   await page.getByLabel('Language').selectOption('hi');
   await page.evaluate(() => { const w = window as unknown as Record<string, string>; w.__micMode = 'ok'; w.__transcript = 'आज नौ सौ कमाए'; });
   await page.getByRole('link', { name: 'आज' }).click();
-  await page.getByRole('button', { name: 'बोलकर पूछें' }).click();
+  await page.getByRole('navigation').getByRole('button', { name: 'बोलकर पूछें' }).click();
   await expect(page.getByText('“आज नौ सौ कमाए”')).toBeVisible();
   expect(await page.evaluate(() => (window as unknown as { __lastLang: string }).__lastLang)).toBe('hi-IN');
   await page.getByRole('button', { name: /कमाई समझें/ }).click();
