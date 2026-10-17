@@ -11,18 +11,27 @@ export class AskError extends Error {
   }
 }
 
+/** Combines the caller's signal with a client timeout without AbortSignal.any, which older Android Chrome lacks. */
 export async function askAssistant(request: AssistantRequest, signal: AbortSignal): Promise<AssistantResponse> {
+  const controller = new AbortController();
+  let timedOut = false;
+  const timer = setTimeout(() => { timedOut = true; controller.abort(); }, 55_000);
+  const onAbort = () => controller.abort();
+  signal.addEventListener('abort', onAbort, { once: true });
   let res: Response;
   try {
     res = await fetch('/api/assistant', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(request),
-      signal: AbortSignal.any([signal, AbortSignal.timeout(55_000)]),
+      signal: controller.signal,
     });
   } catch (error) {
-    if ((error as Error).name === 'AbortError') throw error;
-    throw new AskError((error as Error).name === 'TimeoutError' ? 'err_timeout' : 'err_network');
+    if (timedOut) throw new AskError('err_timeout');
+    throw signal.aborted ? error : new AskError('err_network');
+  } finally {
+    clearTimeout(timer);
+    signal.removeEventListener('abort', onAbort);
   }
   const body = await res.json().catch(() => null) as (AssistantResponse & { error?: string }) | null;
   if (!res.ok || !body || body.error) {
