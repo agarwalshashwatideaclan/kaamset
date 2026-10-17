@@ -1,0 +1,177 @@
+{
+  "app": "https://kaamset.shashwat-5f0.workers.dev",
+  "cssViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "frame": {
+    "width": 780,
+    "height": 1688
+  },
+  "renderScale": 2,
+  "locale": "en-IN",
+  "timezone": "Asia/Kolkata",
+  "commit": "3289f19",
+  "capturedAt": "2026-10-17T06:50:45.044Z",
+  "note": "Demonstration inputs typed through the real form; no seeded data or intercepted requests.",
+  "retakeCapturedAt": "2026-10-17T06:53:59.877Z",
+  "retakeReason": "First grievance take: emulated End key did not move the caret, so typed text landed mid-draft; saved-offline showed that draft. Superseded takes kept in video/captures-raw/superseded.",
+  "edit": "Clips play at real speed (AI waits not shortened). Only blank page-load lead-ins and a 0.2s tail are trimmed.",
+  "scenes": [
+    {
+      "file": "home-languages.webm",
+      "name": "home-languages",
+      "inputs": "Fresh profile; switch language hi → pa → en",
+      "durationMs": 14665,
+      "ai": null,
+      "edit": {
+        "placedAt_s": 3.5,
+        "duration_s": 12.9,
+        "sourceIn_s": 1.0,
+        "speed": 1.0
+      }
+    },
+    {
+      "file": "earnings.webm",
+      "name": "earnings",
+      "inputs": "Food delivery: earned ₹900, received ₹600, expenses ₹180; explain last 30 days",
+      "durationMs": 24070,
+      "ai": {
+        "status": 200,
+        "latencyMs": 3177,
+        "answerStatus": "answered",
+        "title": "Your Earnings Summary",
+        "sources": []
+      },
+      "edit": {
+        "placedAt_s": 16.4,
+        "duration_s": 23.9,
+        "sourceIn_s": 0.2,
+        "speed": 1.0
+      }
+    },
+    {
+      "file": "safety-punjabi.webm",
+      "name": "safety-punjabi",
+      "inputs": "Punjabi UI; daily-wage worker; heat and dizziness at a construction site; save checklist",
+      "durationMs": 20557,
+      "ai": {
+        "status": 200,
+        "latencyMs": 3509,
+        "answerStatus": "answered",
+        "title": "ਗਰਮੀ ਵਿੱਚ ਸਿਰ ਘੁੰਮਣ ਬਾਰੇ ਸੁਰੱਖਿਆ",
+        "sources": [
+          "ndma_heatwave"
+        ]
+      },
+      "edit": {
+        "placedAt_s": 40.3,
+        "duration_s": 17.6,
+        "sourceIn_s": 2.2,
+        "speed": 1.0
+      }
+    },
+    {
+      "file": "welfare-hindi.webm",
+      "name": "welfare-hindi",
+      "inputs": "Hindi UI; driver; how to register on e-Shram; open source link",
+      "durationMs": 18396,
+      "ai": {
+        "status": 200,
+        "latencyMs": 2787,
+        "answerStatus": "answered",
+        "title": "ई-श्रम पंजीकरण",
+        "sources": [
+          "eshram_faq"
+        ]
+      },
+      "edit": {
+        "placedAt_s": 57.9,
+        "duration_s": 17.8,
+        "sourceIn_s": 0.2,
+        "speed": 1.0
+      }
+    },
+    {
+      "file": "cannot-verify.webm",
+      "name": "cannot-verify",
+      "inputs": "English; unsupported state-specific benefit question",
+      "durationMs": 17424,
+      "ai": {
+        "status": 200,
+        "latencyMs": 3659,
+        "answerStatus": "cannot_verify",
+        "title": "Gig Worker Benefits from Punjab Government",
+        "sources": [
+          "pib_gig_backgrounder",
+          "eshram_faq",
+          "myscheme_about"
+        ]
+      },
+      "edit": {
+        "placedAt_s": 75.7,
+        "duration_s": 17.1,
+        "sourceIn_s": 0.2,
+        "speed": 1.0
+      }
+    },
+    {
+      "file": "documents.webm",
+      "name": "documents",
+      "inputs": "English; prepare checklist for e-Shram registration; save checklist",
+      "durationMs": 15499,
+      "ai": {
+        "status": 200,
+        "latencyMs": 2525,
+        "answerStatus": "answered",
+        "title": "e-Shram Registration for Delivery Partners",
+        "sources": [
+          "eshram_faq",
+          "pib_gig_backgrounder"
+        ]
+      },
+      "edit": {
+        "placedAt_s": 92.8,
+        "duration_s": 14.5,
+        "sourceIn_s": 0.2,
+        "speed": 1.0
+      }
+    },
+    {
+      "file": "grievance.webm",
+      "name": "grievance",
+      "inputs": "From the ₹300 pending record; confirm facts; edit and save the draft",
+      "durationMs": 26367,
+      "ai": {
+        "status": 200,
+        "latencyMs": 3193,
+        "answerStatus": "answered",
+        "title": "Drafting a complaint about unpaid earnings",
+        "sources": []
+      },
+      "retake": true,
+      "capturedAt": "2026-10-17T06:53:59.877Z",
+      "edit": {
+        "placedAt_s": 107.3,
+        "duration_s": 25.2,
+        "sourceIn_s": 0.2,
+        "speed": 1.0
+      }
+    },
+    {
+      "file": "saved-offline.webm",
+      "name": "saved-offline",
+      "inputs": "Saved: tick checklist, reload; then offline reload and an AI attempt",
+      "durationMs": 19038,
+      "ai": null,
+      "retake": true,
+      "capturedAt": "2026-10-17T06:53:59.877Z",
+      "edit": {
+        "placedAt_s": 132.5,
+        "duration_s": 19.2,
+        "sourceIn_s": 0.2,
+        "speed": 1.0
+      }
+    }
+  ]
+}

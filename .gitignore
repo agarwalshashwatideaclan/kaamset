@@ -18,3 +18,9 @@ docs/DEMO_VIDEO_PLAN.md
 .playwright-mcp/
 video/kaamset-demo/captures/
 video/kaamset-demo/output/
+video/captures-raw/
+video/kaamset-demo/renders/
+video/kaamset-demo/.hyperframes/
+video/kaamset-demo/captures/*.webm
+video/kaamset-demo/node_modules/
+video/kaamset-demo/.thumbnails/

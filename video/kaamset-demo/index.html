@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>KaamSet mobile demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --canvas: #f8f7f2;
+        --ink: #111827;
+        --muted: #4b4f57;
+        --accent: #b94725;
+        --line: #ddd8cc;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--canvas); }
+      #root {
+        position: relative; width: 100%; height: 100%; overflow: hidden;
+        background: var(--canvas); color: var(--ink); font-family: system-ui, sans-serif;
+      }
+
+      .ghost {
+        position: absolute; left: -40px; bottom: 40px; width: 1400px;
+        font-family: serif; font-weight: 700; font-size: 330px; line-height: 1;
+        color: var(--accent); opacity: 0.05; white-space: nowrap;
+      }
+      .glow {
+        position: absolute; width: 900px; height: 900px; border-radius: 50%; left: 520px; top: -260px;
+        background: radial-gradient(circle, rgba(185, 71, 37, 0.14), rgba(185, 71, 37, 0) 70%);
+      }
+
+      .phone-shadow {
+        position: absolute; left: 169px; top: 260px; width: 742px; height: 1606px;
+        border-radius: 40px; background: #fff; border: 2px solid var(--line);
+        box-shadow: 0 30px 70px rgba(60, 40, 20, 0.18);
+      }
+      video.screen {
+        position: absolute; left: 170px; top: 261px; width: 740px; height: 1604px;
+        object-fit: cover; border-radius: 38px; background: var(--canvas);
+      }
+
+      .label {
+        position: absolute; left: 90px; right: 90px; top: 50px;
+        display: flex; flex-direction: column; gap: 12px;
+      }
+      .chapter {
+        display: block; font-size: 30px; font-weight: 800; letter-spacing: 0.08em;
+        text-transform: uppercase; color: var(--accent);
+      }
+      .caption { display: block; font-size: 36px; line-height: 1.32; font-weight: 500; color: var(--ink); max-width: 900px; }
+
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-rb79" id="root" data-composition-id="main" data-start="0" data-duration="156.7" data-width="1080" data-height="1920">
+      <div data-hf-id="hf-jqkb" class="glow" id="glow" aria-hidden="true"></div>
+      <div data-hf-id="hf-d56y" class="ghost" id="ghost" aria-hidden="true" data-layout-allow-occlusion data-layout-allow-overflow>KaamSet · काम · ਕੰਮ</div>
+
+      <div data-hf-id="hf-39ic" id="intro" data-composition-id="intro" data-composition-src="compositions/intro.html" data-start="0" data-duration="3.5" data-track-index="1" data-width="1080" data-height="1920"></div>
+
+      <div data-hf-id="hf-8gtb" id="phone-shadow" class="clip phone-shadow" data-start="3.5" data-duration="148.2" data-track-index="2"></div>
+
+      <video data-hf-id="hf-djhv" id="v-home" class="clip screen" src="assets/home-languages.mp4" muted playsinline data-start="3.5" data-duration="12.9" data-media-start="1.0" data-track-index="3"></video>
+      <video data-hf-id="hf-d8ka" id="v-earn" class="clip screen" src="assets/earnings.mp4" muted playsinline data-start="16.4" data-duration="23.9" data-media-start="0.2" data-track-index="3"></video>
+      <video data-hf-id="hf-b2d5" id="v-safety" class="clip screen" src="assets/safety-punjabi.mp4" muted playsinline data-start="40.3" data-duration="17.6" data-media-start="2.2" data-track-index="3"></video>
+      <video data-hf-id="hf-y3ve" id="v-welfare" class="clip screen" src="assets/welfare-hindi.mp4" muted playsinline data-start="57.9" data-duration="17.8" data-media-start="0.2" data-track-index="3"></video>
+      <video data-hf-id="hf-iiys" id="v-verify" class="clip screen" src="assets/cannot-verify.mp4" muted playsinline data-start="75.7" data-duration="17.1" data-media-start="0.2" data-track-index="3"></video>
+      <video data-hf-id="hf-d0pq" id="v-docs" class="clip screen" src="assets/documents.mp4" muted playsinline data-start="92.8" data-duration="14.5" data-media-start="0.2" data-track-index="3"></video>
+      <video data-hf-id="hf-grrh" id="v-grv" class="clip screen" src="assets/grievance.mp4" muted playsinline data-start="107.3" data-duration="25.2" data-media-start="0.2" data-track-index="3"></video>
+      <video data-hf-id="hf-1k55" id="v-saved" class="clip screen" src="assets/saved-offline.mp4" muted playsinline data-start="132.5" data-duration="19.2" data-media-start="0.2" data-track-index="3"></video>
+
+      <div data-hf-id="hf-elmp" id="c-home" class="clip label" data-start="3.5" data-duration="12.9" data-track-index="4">
+        <span data-hf-id="hf-s5vu" class="chapter">Works in your language</span>
+        <span data-hf-id="hf-jynn" class="caption">English, हिन्दी or ਪੰਜਾਬੀ. No login, no API key — and it starts empty.</span>
+      </div>
+      <div data-hf-id="hf-16wl" id="c-earn-a" class="clip label" data-start="16.4" data-duration="11.6" data-track-index="4">
+        <span data-hf-id="hf-s8d2" class="chapter">1 · Earnings tracking</span>
+        <span data-hf-id="hf-ee3z" class="caption">A real entry: earned ₹900, received ₹600, spent ₹180. Net ₹720, ₹300 still pending.</span>
+      </div>
+      <div data-hf-id="hf-h3m7" id="c-earn-b" class="clip label" data-start="28" data-duration="12.3" data-track-index="4">
+        <span data-hf-id="hf-yzi2" class="chapter">1 · Earnings tracking</span>
+        <span data-hf-id="hf-c1x6" class="caption">Only if you tick “share”, Gemini explains these exact totals.</span>
+      </div>
+      <div data-hf-id="hf-s4cv" id="c-safety" class="clip label" data-start="40.3" data-duration="17.6" data-track-index="4">
+        <span data-hf-id="hf-xgtb" class="chapter">2 · Safety, in Punjabi</span>
+        <span data-hf-id="hf-6gst" class="caption">Heat and dizziness on a building site: NDMA-based steps, saved as a checklist.</span>
+      </div>
+      <div data-hf-id="hf-btrf" id="c-welfare" class="clip label" data-start="57.9" data-duration="17.8" data-track-index="4">
+        <span data-hf-id="hf-gwqj" class="chapter">3 · Welfare, in Hindi</span>
+        <span data-hf-id="hf-dv7q" class="caption">How to register on e-Shram, grounded in the official FAQ, with the source link.</span>
+      </div>
+      <div data-hf-id="hf-gx5f" id="c-verify" class="clip label" data-start="75.7" data-duration="17.1" data-track-index="4">
+        <span data-hf-id="hf-m4r8" class="chapter">3 · Rights &amp; welfare: honest limits</span>
+        <span data-hf-id="hf-77ff" class="caption">No verified source for a Punjab payment? It says so, and invents no amount or deadline.</span>
+      </div>
+      <div data-hf-id="hf-j906" id="c-docs" class="clip label" data-start="92.8" data-duration="14.5" data-track-index="4">
+        <span data-hf-id="hf-0yfx" class="chapter">4 · Document help</span>
+        <span data-hf-id="hf-my8f" class="caption">An e-Shram checklist: “Required” only where an official source says so.</span>
+      </div>
+      <div data-hf-id="hf-a5lr" id="c-grv" class="clip label" data-start="107.3" data-duration="25.2" data-track-index="4">
+        <span data-hf-id="hf-n0xk" class="chapter">5 · Complaint drafting</span>
+        <span data-hf-id="hf-pto3" class="caption">From the ₹300 pending record: facts confirmed, an editable draft with [placeholders]. Saved, never sent.</span>
+      </div>
+      <div data-hf-id="hf-c9hx" id="c-saved-a" class="clip label" data-start="132.5" data-duration="8.5" data-track-index="4">
+        <span data-hf-id="hf-dt2i" class="chapter">Saved on this device</span>
+        <span data-hf-id="hf-ne72" class="caption">Ticked checklists and edited drafts are still there after a reload.</span>
+      </div>
+      <div data-hf-id="hf-qvxw" id="c-saved-b" class="clip label" data-start="141" data-duration="10.7" data-track-index="4">
+        <span data-hf-id="hf-ewmf" class="chapter">Offline</span>
+        <span data-hf-id="hf-mnb8" class="caption">Records keep working offline. New AI answers wait for internet — your text is kept.</span>
+      </div>
+
+      <div data-hf-id="hf-xo2k" id="outro" data-composition-id="outro" data-composition-src="compositions/outro.html" data-start="151.7" data-duration="5" data-track-index="1" data-width="1080" data-height="1920"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const D = 156.7;
+
+      tl.fromTo("#glow", { x: 0, y: 0, scale: 1 }, { x: -60, y: 40, scale: 1.08, duration: D, ease: "sine.inOut" }, 0);
+      tl.fromTo("#ghost", { x: 0 }, { x: -220, duration: D, ease: "none" }, 0);
+
+
+      tl.fromTo("#phone-shadow", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 3.5);
+
+      const labels = [
+        ["c-home", 3.5], ["c-earn-a", 16.4], ["c-earn-b", 28], ["c-safety", 40.3], ["c-welfare", 57.9],
+        ["c-verify", 75.7], ["c-docs", 92.8], ["c-grv", 107.3], ["c-saved-a", 132.5], ["c-saved-b", 141],
+      ];
+      for (const [id, start] of labels) {
+        tl.fromTo(`#${id} .chapter`, { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, start + 0.05);
+        tl.fromTo(`#${id} .caption`, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, start + 0.15);
+      }
+
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

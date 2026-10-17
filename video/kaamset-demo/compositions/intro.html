@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      #intro-root { position: absolute; inset: 0; color: #111827; font-family: system-ui, sans-serif; }
+      #intro-root .card { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 110px; gap: 34px; }
+      #intro-root img { display: block; width: 150px; height: 150px; }
+      #intro-root h1 { font-family: serif; font-weight: 700; font-size: 132px; line-height: 1; letter-spacing: -0.02em; }
+      #intro-root .lede { display: block; font-size: 46px; line-height: 1.3; font-weight: 500; max-width: 860px; }
+      #intro-root .areas { display: flex; flex-wrap: wrap; gap: 14px; max-width: 860px; }
+      #intro-root .areas span { display: block; font-size: 32px; font-weight: 700; padding: 12px 24px; border-radius: 999px; border: 2px solid #b94725; color: #b94725; background: rgba(255, 255, 255, 0.6); }
+      #intro-root .small { display: block; font-size: 30px; line-height: 1.4; color: #4b4f57; max-width: 860px; }
+      #intro-root .url { display: block; font-size: 52px; font-weight: 800; color: #a03c1f; letter-spacing: -0.01em; }
+      #intro-root .rule { display: block; width: 120px; height: 6px; border-radius: 3px; background: #b94725; }
+      </style>
+      <div data-hf-id="hf-y534" id="intro-root" data-composition-id="intro" data-width="1080" data-height="1920">
+        <div data-hf-id="hf-vn2y" class="card">
+          <img data-hf-id="hf-atw8" id="intro-logo" src="assets/kaamset-icon.svg" alt="" />
+          <h1 data-hf-id="hf-15mg" id="intro-title">KaamSet</h1>
+          <span data-hf-id="hf-wxry" id="intro-lede" class="lede">A Gemini-powered companion for delivery partners, drivers and daily-wage workers.</span>
+          <span data-hf-id="hf-ho9q" id="intro-note" class="small">Recorded on the live app in a phone-sized browser. Every AI answer is real, shown at real speed.</span>
+        </div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#intro-logo", { y: 30, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, 0.15);
+        tl.fromTo("#intro-title", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }, 0.3);
+        tl.fromTo("#intro-lede", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.55);
+        tl.fromTo("#intro-note", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.out" }, 0.9);
+        tl.to(["#intro-logo", "#intro-title", "#intro-lede", "#intro-note"], { opacity: 0, y: -20, duration: 0.35, ease: "power2.in", stagger: 0.03 }, 3.05);
+        window.__timelines["intro"] = tl;
+      </script>
+    </template>
+  </body>
+</html>
