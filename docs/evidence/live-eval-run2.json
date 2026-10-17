@@ -1,0 +1,94 @@
+[
+  {
+    "id": "rights-en",
+    "status": 200,
+    "ms": 3132,
+    "body": {
+      "status": "cannot_verify",
+      "language": "en",
+      "title": "New Labour Codes for App-Based Delivery Workers",
+      "answer": "The new labour codes recognise gig and platform workers like you for the first time. This means you can get social security benefits through a fund that aggregators contribute to. Schemes for these workers may include life and disability cover, health benefits, and pension. However, the new codes do not say that platforms owe minimum wage to delivery partners. The rules about minimum wage in the Code on Wages apply to employer-employee relationships, and the sources do not say that a platform delivery partner is an employee.",
+      "steps": [
+        "Register on the e-Shram portal to get a Universal Account Number (UAN) for social security benefits.",
+        "Visit the myScheme portal to search for government welfare schemes you might be eligible for.",
+        "Check the official website of the Ministry of Labour and Employment for updates on specific schemes for gig workers."
+      ],
+      "checklist": [
+        "Aadhaar number",
+        "Mobile number linked to Aadhaar (for self-registration on e-Shram)",
+        "Bank account details (for e-Shram profile update)"
+      ],
+      "sourceIds": [
+        "pib_labour_codes",
+        "pib_gig_backgrounder",
+        "eshram_faq",
+        "myscheme_about"
+      ],
+      "draft": "",
+      "missingDetails": [],
+      "caveat": "The information provided is based on the available public releases and FAQs, and specific scheme details or eligibility are not fully established here.",
+      "sources": [
+        {
+          "id": "pib_labour_codes",
+          "title": "Government makes the four Labour Codes effective (21 Nov 2025)",
+          "publisher": "Press Information Bureau, Government of India",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2192463"
+        },
+        {
+          "id": "pib_gig_backgrounder",
+          "title": "Labour Reforms: Formalising and Safeguarding India’s Gig & Platform Workforce (9 Dec 2025)",
+          "publisher": "Press Information Bureau, Government of India",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2200767"
+        },
+        {
+          "id": "eshram_faq",
+          "title": "e-Shram FAQs",
+          "publisher": "Ministry of Labour and Employment",
+          "url": "https://eshram.gov.in/faqs"
+        },
+        {
+          "id": "myscheme_about",
+          "title": "About myScheme",
+          "publisher": "National e-Governance Division (MeitY)",
+          "url": "https://www.myscheme.gov.in/about"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grievance-payment-en",
+    "status": 200,
+    "ms": 4379,
+    "body": {
+      "status": "answered",
+      "language": "en",
+      "title": "Payment Not Received Grievance",
+      "answer": "You can raise a complaint with the platform support team about the missing payment. The Code on Social Security 2020 now recognizes gig workers and platform workers, and aggregators are required to contribute to a Social Security Fund for welfare schemes.",
+      "steps": [
+        "Send the draft message to your platform's support team.",
+        "Keep a record of the date and time you sent the message.",
+        "Gather any screenshots or payment statements that show the amount you earned and the amount you received.",
+        "Follow up with the platform if you do not hear back within a few days."
+      ],
+      "checklist": [
+        "Screenshots of your earnings for 12 October.",
+        "Payment statements showing the amount received on 12 October.",
+        "Any chat history with the platform regarding this payment."
+      ],
+      "sourceIds": [
+        "pib_gig_backgrounder"
+      ],
+      "draft": "Dear Platform Support Team,\n\nI am writing to report a discrepancy in my payment for work completed on 12 October. I earned ₹900.00 for food delivery on that day, but only received ₹600.00. This leaves a pending amount of ₹300.00.\n\nPlease investigate this issue and ensure the remaining ₹300.00 is paid to me.\n\nMy name: [Your Name]\nPartner/Worker ID: [Your Partner/Worker ID]\nContact: [Your Contact Details]",
+      "missingDetails": [],
+      "caveat": "This draft is based on the information you provided and is for your use in communicating with the platform.",
+      "sources": [
+        {
+          "id": "pib_gig_backgrounder",
+          "title": "Labour Reforms: Formalising and Safeguarding India’s Gig & Platform Workforce (9 Dec 2025)",
+          "publisher": "Press Information Bureau, Government of India",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2200767"
+        }
+      ]
+    }
+  }
+]

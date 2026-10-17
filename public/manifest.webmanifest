@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "KaamSet — work companion",
+  "short_name": "KaamSet",
+  "description": "Earnings, safety, rights, documents and complaint drafts for gig and daily-wage workers. English, हिन्दी, ਪੰਜਾਬੀ.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F8F7F2",
+  "theme_color": "#F8F7F2",
+  "lang": "en",
+  "categories": ["productivity", "finance", "utilities"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

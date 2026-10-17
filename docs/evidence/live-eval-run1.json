@@ -1,0 +1,359 @@
+[
+  {
+    "id": "earnings-en",
+    "status": 200,
+    "ms": 2255,
+    "body": {
+      "status": "answered",
+      "language": "en",
+      "title": "Your Earnings Summary",
+      "answer": "From September 18, 2026, to October 17, 2026, you earned ₹900.00. Your expenses were ₹180.00, making your net earnings ₹720.00. You have received ₹600.00, and ₹300.00 is still pending.",
+      "steps": [
+        "Keep a record of all your earnings and expenses.",
+        "Check your app or payment statements for details of each payment.",
+        "Contact your company's support if you have questions about pending payments."
+      ],
+      "checklist": [
+        "Check your app for payment breakdowns.",
+        "Match received amounts with your bank statements.",
+        "Note down any differences you find.",
+        "Ask your company about any missing payments."
+      ],
+      "sourceIds": [],
+      "draft": "",
+      "missingDetails": [],
+      "caveat": "This summary is based on the information you provided.",
+      "sources": []
+    }
+  },
+  {
+    "id": "safety-delivery-hi",
+    "status": 200,
+    "ms": 3919,
+    "body": {
+      "status": "answered",
+      "language": "hi",
+      "title": "बारिश में सुरक्षित डिलीवरी",
+      "answer": "बारिश में डिलीवरी करते समय आपको बहुत सावधान रहना चाहिए। गीली सड़कों पर स्कूटर चलाना खतरनाक हो सकता है।",
+      "steps": [
+        "धीरे चलाएं और अपनी हेडलाइट चालू रखें।",
+        "सुनिश्चित करें कि आपके स्कूटर के टायर में अच्छी पकड़ हो।",
+        "ब्रेक धीरे-धीरे लगाएं ताकि फिसलें नहीं।",
+        "अपने फोन को वाटरप्रूफ कवर में रखें।",
+        "अगर बारिश बहुत तेज़ हो जाए, तो किसी सुरक्षित जगह रुक जाएं।"
+      ],
+      "checklist": [
+        "हेलमेट पहना है।",
+        "स्कूटर के टायर ठीक हैं।",
+        "ब्रेक काम कर रहे हैं।",
+        "रेनकोट या वाटरप्रूफ जैकेट पहनी है।",
+        "फोन वाटरप्रूफ कवर में है।"
+      ],
+      "sourceIds": [],
+      "draft": "",
+      "missingDetails": [],
+      "caveat": "यह सलाह सामान्य सुरक्षा दिशानिर्देशों पर आधारित है।",
+      "sources": []
+    }
+  },
+  {
+    "id": "safety-daily-pa",
+    "status": 200,
+    "ms": 3284,
+    "body": {
+      "status": "answered",
+      "language": "pa",
+      "title": "ਗਰਮੀ ਵਿੱਚ ਸਿਰ ਘੁੰਮਣ ਬਾਰੇ ਜਾਣਕਾਰੀ",
+      "answer": "ਜੇਕਰ ਤੁਹਾਨੂੰ ਗਰਮੀ ਵਿੱਚ ਕੰਮ ਕਰਦੇ ਸਮੇਂ ਚੱਕਰ ਆ ਰਹੇ ਹਨ, ਤਾਂ ਇਹ ਗਰਮੀ ਨਾਲ ਸਬੰਧਤ ਬਿਮਾਰੀ ਦਾ ਸੰਕੇਤ ਹੋ ਸਕਦਾ ਹੈ। ਤੁਰੰਤ ਆਰਾਮ ਕਰੋ ਅਤੇ ਠੰਢੀ ਜਗ੍ਹਾ 'ਤੇ ਜਾਓ।",
+      "steps": [
+        "ਤੁਰੰਤ ਕਿਸੇ ਠੰਢੀ ਅਤੇ ਛਾਂ ਵਾਲੀ ਜਗ੍ਹਾ 'ਤੇ ਜਾਓ।",
+        "ਜੇਕਰ ਤੁਸੀਂ ਹੋਸ਼ ਵਿੱਚ ਹੋ, ਤਾਂ ਪਾਣੀ ਜਾਂ ਕੋਈ ਹੋਰ ਤਰਲ ਪੀਓ।",
+        "ਆਪਣੇ ਸਰੀਰ ਨੂੰ ਗਿੱਲੇ ਕੱਪੜੇ ਨਾਲ ਠੰਢਾ ਕਰੋ ਅਤੇ ਪੱਖਾ ਝੱਲੋ।",
+        "ਜੇਕਰ ਲੱਛਣ ਵਿਗੜਦੇ ਹਨ ਜਾਂ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਰਹਿੰਦੇ ਹਨ, ਤਾਂ ਡਾਕਟਰ ਨੂੰ ਮਿਲੋ।"
+      ],
+      "checklist": [
+        "ਕੰਮ ਕਰਦੇ ਸਮੇਂ ਹਰ ਘੰਟੇ ਪਾਣੀ ਪੀਓ।",
+        "ਹਲਕੇ ਰੰਗ ਦੇ, ਢਿੱਲੇ ਕੱਪੜੇ ਪਾਓ।",
+        "ਸਿਰ ਢੱਕ ਕੇ ਰੱਖੋ।",
+        "ਦਿਨ ਦੇ ਸਭ ਤੋਂ ਗਰਮ ਸਮੇਂ ਵਿੱਚ ਕੰਮ ਕਰਨ ਤੋਂ ਬਚੋ।"
+      ],
+      "sourceIds": [
+        "ndma_heatwave"
+      ],
+      "draft": "",
+      "missingDetails": [],
+      "caveat": "ਇਹ ਜਾਣਕਾਰੀ ਸਿਰਫ਼ ਆਮ ਸਲਾਹ ਲਈ ਹੈ ਅਤੇ ਡਾਕਟਰੀ ਸਲਾਹ ਦਾ ਬਦਲ ਨਹੀਂ ਹੈ।",
+      "sources": [
+        {
+          "id": "ndma_heatwave",
+          "title": "Heat Wave guidance",
+          "publisher": "National Disaster Management Authority",
+          "url": "https://ndma.gov.in/Natural-Hazards/Heat-Wave"
+        }
+      ]
+    }
+  },
+  {
+    "id": "rights-en",
+    "status": 200,
+    "ms": 4116,
+    "body": {
+      "status": "answered",
+      "language": "en",
+      "title": "New Labour Codes for App-Based Delivery Workers",
+      "answer": "The new labour codes recognise gig workers like you for the first time. This means you can get social security benefits. Aggregators, like the food delivery app, must contribute to a social security fund for workers. However, the codes do not say that platforms owe you a minimum wage. The rules for specific schemes and benefits are still being made by the government.",
+      "steps": [
+        "The Code on Social Security 2020 formally recognises gig workers and platform workers.",
+        "Aggregators must contribute 1-2% of their annual turnover to a Social Security Fund for gig and platform workers.",
+        "This fund will finance welfare schemes like life and disability cover, health benefits, and pension.",
+        "You can self-register on the e-Shram portal to get a unique Aadhaar-linked ID for portable benefits.",
+        "The codes do not establish that a platform delivery partner is an employee or is owed a minimum wage by a platform."
+      ],
+      "checklist": [
+        "Register on the e-Shram portal to get your UAN.",
+        "Check the myScheme portal for available government welfare schemes.",
+        "Look for updates from the Ministry of Labour and Employment on new schemes for gig workers."
+      ],
+      "sourceIds": [
+        "pib_labour_codes",
+        "pib_gig_backgrounder",
+        "eshram_faq",
+        "myscheme_about"
+      ],
+      "draft": "",
+      "missingDetails": [],
+      "caveat": "Specific scheme details, benefit amounts, and eligibility criteria are not provided in the labour codes and need to be checked on official scheme portals.",
+      "sources": [
+        {
+          "id": "pib_labour_codes",
+          "title": "Government makes the four Labour Codes effective (21 Nov 2025)",
+          "publisher": "Press Information Bureau, Government of India",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2192463"
+        },
+        {
+          "id": "pib_gig_backgrounder",
+          "title": "Labour Reforms: Formalising and Safeguarding India’s Gig & Platform Workforce (9 Dec 2025)",
+          "publisher": "Press Information Bureau, Government of India",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2200767"
+        },
+        {
+          "id": "eshram_faq",
+          "title": "e-Shram FAQs",
+          "publisher": "Ministry of Labour and Employment",
+          "url": "https://eshram.gov.in/faqs"
+        },
+        {
+          "id": "myscheme_about",
+          "title": "About myScheme",
+          "publisher": "National e-Governance Division (MeitY)",
+          "url": "https://www.myscheme.gov.in/about"
+        }
+      ]
+    }
+  },
+  {
+    "id": "welfare-hi",
+    "status": 200,
+    "ms": 2614,
+    "body": {
+      "status": "answered",
+      "language": "hi",
+      "title": "ई-श्रम पंजीकरण और लाभ",
+      "answer": "ई-श्रम असंगठित क्षेत्र के श्रमिकों का एक राष्ट्रीय डेटाबेस है। पंजीकरण मुफ्त है और आपको एक स्थायी 12-अंकीय यूनिवर्सल अकाउंट नंबर (UAN) मिलता है। यह डेटाबेस सामाजिक सुरक्षा योजनाओं को पहुंचाने में मदद करता है।",
+      "steps": [
+        "आप ई-श्रम पोर्टल पर खुद को पंजीकृत कर सकते हैं।",
+        "पंजीकरण के लिए आपको अपना आधार नंबर और आधार से जुड़ा मोबाइल नंबर चाहिए।",
+        "यदि आपका मोबाइल नंबर आधार से लिंक नहीं है, तो आप कॉमन सर्विस सेंटर (CSC) या राज्य सेवा केंद्र पर बायोमेट्रिक प्रमाणीकरण का उपयोग करके पंजीकरण कर सकते हैं।",
+        "पंजीकरण के बाद आपको एक ई-श्रम कार्ड मिलेगा जिसमें आपका UAN होगा।",
+        "आप myScheme पोर्टल पर जाकर अपनी पात्रता के अनुसार सरकारी योजनाओं की जानकारी ले सकते हैं।"
+      ],
+      "checklist": [
+        "आधार नंबर",
+        "आधार से लिंक मोबाइल नंबर",
+        "बैंक खाता विवरण (वैकल्पिक)"
+      ],
+      "sourceIds": [
+        "eshram_faq",
+        "pib_gig_backgrounder",
+        "myscheme_about"
+      ],
+      "draft": "",
+      "missingDetails": [],
+      "caveat": "ई-श्रम पंजीकरण से किसी भी योजना का लाभ या भुगतान अपने आप नहीं मिलता है।",
+      "sources": [
+        {
+          "id": "eshram_faq",
+          "title": "e-Shram FAQs",
+          "publisher": "Ministry of Labour and Employment",
+          "url": "https://eshram.gov.in/faqs"
+        },
+        {
+          "id": "pib_gig_backgrounder",
+          "title": "Labour Reforms: Formalising and Safeguarding India’s Gig & Platform Workforce (9 Dec 2025)",
+          "publisher": "Press Information Bureau, Government of India",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2200767"
+        },
+        {
+          "id": "myscheme_about",
+          "title": "About myScheme",
+          "publisher": "National e-Governance Division (MeitY)",
+          "url": "https://www.myscheme.gov.in/about"
+        }
+      ]
+    }
+  },
+  {
+    "id": "unsupported-state-pa",
+    "status": 200,
+    "ms": 3515,
+    "body": {
+      "status": "cannot_verify",
+      "language": "pa",
+      "title": "ਗਿਗ ਵਰਕਰਾਂ ਲਈ ਸਰਕਾਰੀ ਸਕੀਮਾਂ",
+      "answer": "ਸਰਕਾਰ ਗਿਗ ਵਰਕਰਾਂ ਲਈ ਕਈ ਸਕੀਮਾਂ ਬਣਾ ਰਹੀ ਹੈ। ਪਰ, ਸਾਡੇ ਕੋਲ ਪੰਜਾਬ ਸਰਕਾਰ ਦੁਆਰਾ ਗਿਗ ਵਰਕਰਾਂ ਨੂੰ ਹਰ ਮਹੀਨੇ ਦਿੱਤੀ ਜਾਣ ਵਾਲੀ ਕਿਸੇ ਖਾਸ ਰਕਮ ਜਾਂ ਆਖਰੀ ਤਾਰੀਖ ਬਾਰੇ ਜਾਣਕਾਰੀ ਨਹੀਂ ਹੈ।",
+      "steps": [
+        "ਤੁਸੀਂ myScheme ਪੋਰਟਲ 'ਤੇ ਜਾ ਕੇ ਆਪਣੀ ਯੋਗਤਾ ਅਨੁਸਾਰ ਕੇਂਦਰ ਅਤੇ ਰਾਜ ਸਰਕਾਰ ਦੀਆਂ ਸਕੀਮਾਂ ਲੱਭ ਸਕਦੇ ਹੋ।",
+        "myScheme ਪੋਰਟਲ 'ਤੇ, ਤੁਸੀਂ ਹਰੇਕ ਸਕੀਮ ਦੇ ਵੇਰਵੇ, ਜਿਵੇਂ ਕਿ ਲਾਭ ਅਤੇ ਅਰਜ਼ੀ ਦੀ ਆਖਰੀ ਤਾਰੀਖ, ਦੇਖ ਸਕਦੇ ਹੋ।",
+        "ਤੁਸੀਂ ਈ-ਸ਼੍ਰਮ ਪੋਰਟਲ 'ਤੇ ਰਜਿਸਟਰ ਕਰ ਸਕਦੇ ਹੋ, ਜਿਸ ਨਾਲ ਤੁਹਾਨੂੰ ਸਮਾਜਿਕ ਸੁਰੱਖਿਆ ਸਕੀਮਾਂ ਤੱਕ ਪਹੁੰਚ ਮਿਲ ਸਕਦੀ ਹੈ।"
+      ],
+      "checklist": [
+        "ਆਪਣਾ ਆਧਾਰ ਨੰਬਰ ਅਤੇ ਆਧਾਰ ਨਾਲ ਲਿੰਕ ਕੀਤਾ ਮੋਬਾਈਲ ਨੰਬਰ ਤਿਆਰ ਰੱਖੋ।",
+        "ਜੇਕਰ ਤੁਹਾਡਾ ਮੋਬਾਈਲ ਨੰਬਰ ਆਧਾਰ ਨਾਲ ਲਿੰਕ ਨਹੀਂ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਕਾਮਨ ਸਰਵਿਸ ਸੈਂਟਰ (CSC) 'ਤੇ ਜਾ ਸਕਦੇ ਹੋ।"
+      ],
+      "sourceIds": [
+        "myscheme_about",
+        "eshram_faq",
+        "pib_gig_backgrounder"
+      ],
+      "draft": "",
+      "missingDetails": [
+        "ਪੰਜਾਬ ਸਰਕਾਰ ਦੁਆਰਾ ਗਿਗ ਵਰਕਰਾਂ ਨੂੰ ਦਿੱਤੀ ਜਾਣ ਵਾਲੀ ਮਾਸਿਕ ਰਕਮ।",
+        "ਅਰਜ਼ੀ ਦੀ ਆਖਰੀ ਤਾਰੀਖ।"
+      ],
+      "caveat": "ਇਹ ਜਾਣਕਾਰੀ ਉਪਲਬਧ ਸਰਕਾਰੀ ਸਰੋਤਾਂ 'ਤੇ ਅਧਾਰਤ ਹੈ ਅਤੇ ਇਸ ਵਿੱਚ ਪੰਜਾਬ ਸਰਕਾਰ ਦੀਆਂ ਖਾਸ ਸਕੀਮਾਂ ਬਾਰੇ ਵੇਰਵੇ ਸ਼ਾਮਲ ਨਹੀਂ ਹਨ।",
+      "sources": [
+        {
+          "id": "myscheme_about",
+          "title": "About myScheme",
+          "publisher": "National e-Governance Division (MeitY)",
+          "url": "https://www.myscheme.gov.in/about"
+        },
+        {
+          "id": "eshram_faq",
+          "title": "e-Shram FAQs",
+          "publisher": "Ministry of Labour and Employment",
+          "url": "https://eshram.gov.in/faqs"
+        },
+        {
+          "id": "pib_gig_backgrounder",
+          "title": "Labour Reforms: Formalising and Safeguarding India’s Gig & Platform Workforce (9 Dec 2025)",
+          "publisher": "Press Information Bureau, Government of India",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2200767"
+        }
+      ]
+    }
+  },
+  {
+    "id": "document-explain-pa",
+    "status": 200,
+    "ms": 2735,
+    "body": {
+      "status": "answered",
+      "language": "pa",
+      "title": "ਯੂਨੀਵਰਸਲ ਅਕਾਊਂਟ ਨੰਬਰ (UAN) ਬਾਰੇ",
+      "answer": "ਇਹ ਪੈਸੇਜ ਦੱਸਦਾ ਹੈ ਕਿ UAN ਇੱਕ 12 ਅੰਕਾਂ ਦਾ ਨੰਬਰ ਹੈ ਜੋ ਤੁਹਾਨੂੰ e-Shram 'ਤੇ ਰਜਿਸਟਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਮਿਲਦਾ ਹੈ। ਇਹ ਵੀ ਦੱਸਦਾ ਹੈ ਕਿ ਤੁਹਾਡਾ ਮੋਬਾਈਲ ਨੰਬਰ ਤੁਹਾਡੇ ਆਧਾਰ ਨਾਲ ਜੁੜਿਆ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।",
+      "steps": [
+        "ਜਦੋਂ ਤੁਸੀਂ e-Shram 'ਤੇ ਰਜਿਸਟਰ ਕਰਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਨੂੰ ਇੱਕ 12 ਅੰਕਾਂ ਦਾ UAN ਨੰਬਰ ਮਿਲਦਾ ਹੈ।",
+        "ਇਹ ਨੰਬਰ ਤੁਹਾਡੀ ਪਛਾਣ ਲਈ ਹੁੰਦਾ ਹੈ।",
+        "ਤੁਹਾਡਾ ਮੋਬਾਈਲ ਨੰਬਰ ਤੁਹਾਡੇ ਆਧਾਰ ਕਾਰਡ ਨਾਲ ਜੁੜਿਆ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ ਅਤੇ ਅੱਪਡੇਟ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।",
+        "ਇਹ ਤੁਹਾਨੂੰ e-Shram ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।"
+      ],
+      "checklist": [],
+      "sourceIds": [
+        "eshram_faq"
+      ],
+      "draft": "",
+      "missingDetails": [],
+      "caveat": "e-Shram 'ਤੇ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਤੁਹਾਨੂੰ ਸਿੱਧੇ ਤੌਰ 'ਤੇ ਕੋਈ ਲਾਭ ਜਾਂ ਭੁਗਤਾਨ ਦੀ ਗਾਰੰਟੀ ਨਹੀਂ ਦਿੰਦੀ।",
+      "sources": [
+        {
+          "id": "eshram_faq",
+          "title": "e-Shram FAQs",
+          "publisher": "Ministry of Labour and Employment",
+          "url": "https://eshram.gov.in/faqs"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grievance-payment-en",
+    "status": 200,
+    "ms": 6562,
+    "body": {
+      "status": "answered",
+      "language": "en",
+      "title": "Payment Not Received Grievance",
+      "answer": "You can send a message to the platform support team about the missing payment. Keep records of your work and payments.",
+      "steps": [
+        "Gather all details about your work and the payment you received.",
+        "Send the draft message to the platform's support team.",
+        "Keep a record of when and how you sent the message.",
+        "If you do not get a reply, follow up with the platform.",
+        "If the issue is still not resolved, you can check with the e-Shram grievance portal or the labour department for further options."
+      ],
+      "checklist": [
+        "Screenshot of your earnings statement for October 12, 2026.",
+        "Screenshot of your bank statement showing the received payment.",
+        "Any chat history with the platform about this payment."
+      ],
+      "sourceIds": [
+        "eshram_faq",
+        "pib_gig_backgrounder"
+      ],
+      "draft": "Dear Platform Support Team,\n\nI am writing about a payment issue for my work on October 12, 2026. I earned ₹900.00 for food delivery work on that day. However, I only received ₹600.00 in my account. There is a pending amount of ₹300.00.\n\nPlease help me to receive the remaining ₹300.00 that is due to me.\n\nThank you.",
+      "missingDetails": [],
+      "caveat": "This draft is based on the information you provided and is for your use with the platform.",
+      "sources": [
+        {
+          "id": "eshram_faq",
+          "title": "e-Shram FAQs",
+          "publisher": "Ministry of Labour and Employment",
+          "url": "https://eshram.gov.in/faqs"
+        },
+        {
+          "id": "pib_gig_backgrounder",
+          "title": "Labour Reforms: Formalising and Safeguarding India’s Gig & Platform Workforce (9 Dec 2025)",
+          "publisher": "Press Information Bureau, Government of India",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2200767"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grievance-blocked-hi",
+    "status": 200,
+    "ms": 2424,
+    "body": {
+      "status": "answered",
+      "language": "hi",
+      "title": "अकाउंट ब्लॉक होने की शिकायत",
+      "answer": "आपकी ड्राइवर आईडी 14 अक्टूबर से बंद है और आपको कोई कारण नहीं बताया गया है। आप प्लेटफॉर्म सपोर्ट टीम से अपना अकाउंट फिर से चालू करने का अनुरोध कर सकते हैं।",
+      "steps": [
+        "प्लेटफॉर्म के सपोर्ट सेक्शन में जाएं।",
+        "अपनी शिकायत दर्ज करें कि आपकी ड्राइवर आईडी 14 अक्टूबर से बंद है और आपको कोई कारण नहीं बताया गया है।",
+        "अनुरोध करें कि आपका अकाउंट फिर से चालू किया जाए।",
+        "शिकायत का एक रिकॉर्ड रखें, जैसे कि शिकायत नंबर या ईमेल का स्क्रीनशॉट।"
+      ],
+      "checklist": [
+        "प्लेटफॉर्म के साथ हुई बातचीत का रिकॉर्ड इकट्ठा करें।",
+        "अगर कोई ईमेल या मैसेज आया है तो उसका स्क्रीनशॉट लें।",
+        "अपनी ड्राइवर आईडी का विवरण इकट्ठा करें।"
+      ],
+      "sourceIds": [],
+      "draft": "प्रिय सपोर्ट टीम,\n\nमेरी ड्राइवर आईडी [आपकी ड्राइवर आईडी] 14 अक्टूबर से बंद है। मुझे इस रुकावट का कोई कारण नहीं बताया गया है।\n\nमैं आपसे अनुरोध करता हूँ कि मेरा अकाउंट फिर से चालू किया जाए।\n\nधन्यवाद।",
+      "missingDetails": [],
+      "caveat": "यह ड्राफ्ट केवल आपके द्वारा दी गई जानकारी पर आधारित है और इसमें कोई कानूनी सलाह शामिल नहीं है।",
+      "sources": []
+    }
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kaamset",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api", "/api/*"]
+  },
+  "vars": { "GEMINI_MODEL": "gemini-2.5-flash" },
+  "ratelimits": [
+    { "name": "AI_LIMITER", "namespace_id": "4711", "simple": { "limit": 8, "period": 60 } }
+  ]
+}
