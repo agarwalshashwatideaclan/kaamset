@@ -31,6 +31,22 @@ if (process.env.REHEARSE) {
     await route.fulfill({ json: { status: 'answered', language: lang, title: text, answer: text, steps: [text], checklist: [text, text], sourceIds: [], draft: req.mode === 'grievance' ? text : '', missingDetails: [], caveat: '', sources: [] } });
   });
 }
+// Headless Chromium has no microphone, so dictation uses a scripted recogniser: the app's real
+// recording sheet shows for ~2.6 s, then the scene's `window.__dictation` text arrives as the transcript.
+// Everything downstream (Ask, Gemini, sources) is the real app. Real dictation was tested on an Android phone.
+await context.addInitScript(() => {
+  class ScriptedRecognition {
+    start() {
+      this.timer = setTimeout(() => {
+        this.onresult?.({ results: [[{ transcript: window.__dictation ?? '' }]] });
+        this.onend?.();
+      }, 2600);
+    }
+    abort() { clearTimeout(this.timer); this.onerror?.({ error: 'aborted' }); this.onend?.(); }
+  }
+  window.SpeechRecognition = ScriptedRecognition;
+  window.webkitSpeechRecognition = ScriptedRecognition;
+});
 // Capture-only tap indicator: drawn on genuine pointer events via CSSOM (the app's CSP blocks inline <style>).
 await context.addInitScript(() => {
   addEventListener('pointerdown', e => {
@@ -153,14 +169,18 @@ await scene('safety-punjabi', 'Punjabi UI; daily-wage worker; heat and dizziness
   return ai;
 });
 
-await scene('welfare-hindi', 'Hindi UI; driver; how to register on e-Shram; open source link', async page => {
-  await page.goto(`${base}/ask`);
+await scene('voice-welfare-hindi', 'Hindi UI; tap centre nav mic on Today; dictate the e-Shram question (scripted recogniser); real Gemini answer', async page => {
+  await page.goto(`${base}/`);
   await page.getByLabel('ਭਾਸ਼ਾ').selectOption('hi');
-  await pause(page, 1000);
+  await page.evaluate(() => { window.__dictation = 'ई-श्रम पर पंजीकरण कैसे करूँ, क्या पैसे लगते हैं?'; });
+  await pause(page, 1500);
+  await tap(page, page.getByRole('navigation').getByRole('button', { name: 'बोलकर पूछें' }));
+  await page.getByText('आपकी आवाज़ रिकॉर्ड हो रही है').waitFor();
+  await pause(page, 2600);
+  await pause(page, 1600);
   await tap(page, page.getByRole('button', { name: /अधिकार और योजनाएँ/ }));
   await tap(page, page.getByRole('button', { name: 'सरकारी मदद खोजें' }));
-  await page.getByLabel('आपका काम').selectOption('driver');
-  await type(page, page.getByLabel('आपका सवाल'), 'ई-श्रम पर पंजीकरण कैसे करूँ, क्या पैसे लगते हैं?');
+  await pause(page, 1200);
   const ai = await ask(page, 'मदद लें');
   await scrollThrough(page, 6);
   await pause(page, 1500);

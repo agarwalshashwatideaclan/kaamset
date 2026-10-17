@@ -11,23 +11,20 @@
   "renderScale": 2,
   "locale": "en-IN",
   "timezone": "Asia/Kolkata",
-  "commit": "3289f19",
-  "capturedAt": "2026-10-17T06:50:45.044Z",
+  "commit": "b79c093",
+  "capturedAt": "2026-10-17T08:17:35.776Z",
   "note": "Demonstration inputs typed through the real form; no seeded data or intercepted requests.",
-  "retakeCapturedAt": "2026-10-17T06:53:59.877Z",
-  "retakeReason": "First grievance take: emulated End key did not move the caret, so typed text landed mid-draft; saved-offline showed that draft. Superseded takes kept in video/captures-raw/superseded.",
-  "edit": "Clips play at real speed (AI waits not shortened). Only blank page-load lead-ins and a 0.2s tail are trimmed.",
   "scenes": [
     {
       "file": "home-languages.webm",
       "name": "home-languages",
       "inputs": "Fresh profile; switch language hi → pa → en",
-      "durationMs": 14665,
+      "durationMs": 14083,
       "ai": null,
       "edit": {
         "placedAt_s": 3.5,
-        "duration_s": 12.9,
-        "sourceIn_s": 1.0,
+        "duration_s": 12.8,
+        "sourceIn_s": 0.6,
         "speed": 1.0
       }
     },
@@ -35,18 +32,18 @@
       "file": "earnings.webm",
       "name": "earnings",
       "inputs": "Food delivery: earned ₹900, received ₹600, expenses ₹180; explain last 30 days",
-      "durationMs": 24070,
+      "durationMs": 23161,
       "ai": {
         "status": 200,
-        "latencyMs": 3177,
+        "latencyMs": 2532,
         "answerStatus": "answered",
         "title": "Your Earnings Summary",
         "sources": []
       },
       "edit": {
-        "placedAt_s": 16.4,
-        "duration_s": 23.9,
-        "sourceIn_s": 0.2,
+        "placedAt_s": 16.3,
+        "duration_s": 23.2,
+        "sourceIn_s": 0.1,
         "speed": 1.0
       }
     },
@@ -54,10 +51,10 @@
       "file": "safety-punjabi.webm",
       "name": "safety-punjabi",
       "inputs": "Punjabi UI; daily-wage worker; heat and dizziness at a construction site; save checklist",
-      "durationMs": 20557,
+      "durationMs": 18773,
       "ai": {
         "status": 200,
-        "latencyMs": 3509,
+        "latencyMs": 4091,
         "answerStatus": "answered",
         "title": "ਗਰਮੀ ਵਿੱਚ ਸਿਰ ਘੁੰਮਣ ਬਾਰੇ ਸੁਰੱਖਿਆ",
         "sources": [
@@ -65,20 +62,20 @@
         ]
       },
       "edit": {
-        "placedAt_s": 40.3,
-        "duration_s": 17.6,
-        "sourceIn_s": 2.2,
+        "placedAt_s": 39.5,
+        "duration_s": 17.9,
+        "sourceIn_s": 0.1,
         "speed": 1.0
       }
     },
     {
-      "file": "welfare-hindi.webm",
-      "name": "welfare-hindi",
-      "inputs": "Hindi UI; driver; how to register on e-Shram; open source link",
-      "durationMs": 18396,
+      "file": "voice-welfare-hindi.webm",
+      "name": "voice-welfare-hindi",
+      "inputs": "Hindi UI; tap centre nav mic on Today; dictate the e-Shram question (scripted recogniser); real Gemini answer",
+      "durationMs": 21171,
       "ai": {
         "status": 200,
-        "latencyMs": 2787,
+        "latencyMs": 2869,
         "answerStatus": "answered",
         "title": "ई-श्रम पंजीकरण",
         "sources": [
@@ -86,9 +83,9 @@
         ]
       },
       "edit": {
-        "placedAt_s": 57.9,
-        "duration_s": 17.8,
-        "sourceIn_s": 0.2,
+        "placedAt_s": 57.4,
+        "duration_s": 20.9,
+        "sourceIn_s": 0.1,
         "speed": 1.0
       }
     },
@@ -96,22 +93,22 @@
       "file": "cannot-verify.webm",
       "name": "cannot-verify",
       "inputs": "English; unsupported state-specific benefit question",
-      "durationMs": 17424,
+      "durationMs": 16473,
       "ai": {
         "status": 200,
-        "latencyMs": 3659,
+        "latencyMs": 2946,
         "answerStatus": "cannot_verify",
         "title": "Gig Worker Benefits from Punjab Government",
         "sources": [
           "pib_gig_backgrounder",
-          "eshram_faq",
-          "myscheme_about"
+          "myscheme_about",
+          "eshram_faq"
         ]
       },
       "edit": {
-        "placedAt_s": 75.7,
-        "duration_s": 17.1,
-        "sourceIn_s": 0.2,
+        "placedAt_s": 78.3,
+        "duration_s": 16.4,
+        "sourceIn_s": 0.1,
         "speed": 1.0
       }
     },
@@ -119,21 +116,21 @@
       "file": "documents.webm",
       "name": "documents",
       "inputs": "English; prepare checklist for e-Shram registration; save checklist",
-      "durationMs": 15499,
+      "durationMs": 15638,
       "ai": {
         "status": 200,
-        "latencyMs": 2525,
+        "latencyMs": 2924,
         "answerStatus": "answered",
-        "title": "e-Shram Registration for Delivery Partners",
+        "title": "e-Shram Registration Checklist",
         "sources": [
           "eshram_faq",
           "pib_gig_backgrounder"
         ]
       },
       "edit": {
-        "placedAt_s": 92.8,
-        "duration_s": 14.5,
-        "sourceIn_s": 0.2,
+        "placedAt_s": 94.7,
+        "duration_s": 14.8,
+        "sourceIn_s": 0.1,
         "speed": 1.0
       }
     },
@@ -141,20 +138,20 @@
       "file": "grievance.webm",
       "name": "grievance",
       "inputs": "From the ₹300 pending record; confirm facts; edit and save the draft",
-      "durationMs": 26367,
+      "durationMs": 25845,
       "ai": {
         "status": 200,
-        "latencyMs": 3193,
+        "latencyMs": 3275,
         "answerStatus": "answered",
         "title": "Drafting a complaint about unpaid earnings",
-        "sources": []
+        "sources": [
+          "eshram_faq"
+        ]
       },
-      "retake": true,
-      "capturedAt": "2026-10-17T06:53:59.877Z",
       "edit": {
-        "placedAt_s": 107.3,
-        "duration_s": 25.2,
-        "sourceIn_s": 0.2,
+        "placedAt_s": 109.5,
+        "duration_s": 24.9,
+        "sourceIn_s": 0.1,
         "speed": 1.0
       }
     },
@@ -162,16 +159,16 @@
       "file": "saved-offline.webm",
       "name": "saved-offline",
       "inputs": "Saved: tick checklist, reload; then offline reload and an AI attempt",
-      "durationMs": 19038,
+      "durationMs": 18939,
       "ai": null,
-      "retake": true,
-      "capturedAt": "2026-10-17T06:53:59.877Z",
       "edit": {
-        "placedAt_s": 132.5,
+        "placedAt_s": 134.4,
         "duration_s": 19.2,
-        "sourceIn_s": 0.2,
+        "sourceIn_s": 0.1,
         "speed": 1.0
       }
     }
-  ]
+  ],
+  "edit": "Clips play at real speed (AI waits not shortened). Only blank page-load lead-ins and a 0.2s tail are trimmed.",
+  "voiceNote": "voice-welfare-hindi uses a scripted SpeechRecognition (headless browsers have no microphone): the app shows its real recording sheet, then receives the Hindi question as the transcript. The caption discloses this. Real dictation was tested by the user on an Android phone. Read-aloud is not shown (silent video)."
 }

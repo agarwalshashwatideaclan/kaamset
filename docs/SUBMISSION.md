@@ -32,7 +32,7 @@ KaamSet is a phone-first assistant for delivery partners, drivers and daily-wage
 
 ## Demo video
 
-`video/kaamset-demo/renders/kaamset-mobile-demo.mp4` — 2:37, 1080×1920 (9:16), silent, captioned in English. It is built from real recordings of the live app (provenance: `video/kaamset-demo/capture-manifest.json`, QA: `video/kaamset-demo/QA.md`). It covers all five areas and all three languages. Upload it as an unlisted YouTube video or a shared Drive link for the form.
+`video/kaamset-demo/renders/kaamset-mobile-demo.mp4` — 2:39, 1080×1920 (9:16), silent, captioned in English, including the new centre-mic voice input (the dictation in the recording is scripted, as the caption discloses). It is built from real recordings of the live app (provenance: `video/kaamset-demo/capture-manifest.json`, QA: `video/kaamset-demo/QA.md`). It covers all five areas and all three languages. Upload it as an unlisted YouTube video or a shared Drive link for the form.
 
 ## Demo script (about 4 minutes)
 
