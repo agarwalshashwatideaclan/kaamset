@@ -1,0 +1,75 @@
+{
+  "voice": "af_heart",
+  "lines": [
+    {
+      "id": "intro",
+      "start": 0.4,
+      "window": 3.1,
+      "text": "Meet KaamSet.",
+      "duration": 1.09
+    },
+    {
+      "id": "home",
+      "start": 3.9,
+      "window": 12.4,
+      "text": "A phone-first helper for gig and daily-wage workers. It works in English, Hindi and Punjabi, needs no login, and starts completely empty.",
+      "duration": 9.19
+    },
+    {
+      "id": "earn",
+      "start": 16.7,
+      "window": 22.8,
+      "text": "Log a day of work: nine hundred rupees earned, six hundred received, one hundred eighty spent. KaamSet works out seven hundred twenty net, with three hundred still pending. Only when you choose to share these totals, Gemini explains them in simple words.",
+      "duration": 16.02
+    },
+    {
+      "id": "safety",
+      "start": 39.9,
+      "window": 17.5,
+      "text": "Safety advice fits the work. In Punjabi, a construction worker feels dizzy in the heat. The steps follow official heat-wave guidance, and the checklist is saved for later.",
+      "duration": 10.54
+    },
+    {
+      "id": "voice",
+      "start": 57.8,
+      "window": 20.5,
+      "text": "New in this version: voice. Tap the centre mic, and a clear panel shows your voice is being recorded. Here, in Hindi, a driver asks how to register on e-Shram. The answer comes from the official e-Shram FAQ, with the source link.",
+      "duration": 14.7
+    },
+    {
+      "id": "verify",
+      "start": 78.7,
+      "window": 16.0,
+      "text": "When there is no verified source, KaamSet says so. Asked about a Punjab monthly payment, it invents no amount or deadline, and points to the official portal instead.",
+      "duration": 10.39
+    },
+    {
+      "id": "docs",
+      "start": 95.1,
+      "window": 14.4,
+      "text": "Document help builds a checklist. Items are marked required only when an official source says so. Everything else is a suggestion.",
+      "duration": 7.94
+    },
+    {
+      "id": "grv",
+      "start": 109.9,
+      "window": 24.5,
+      "text": "For the three hundred rupees still pending, KaamSet drafts a complaint from the worker's own record. The facts are shown first, placeholders mark missing details, and the worker edits and saves the draft. Nothing is ever sent automatically.",
+      "duration": 14.83
+    },
+    {
+      "id": "saved",
+      "start": 134.8,
+      "window": 18.8,
+      "text": "Drafts and checklists stay on the device after a reload. And offline, records keep working. New AI answers simply wait for the internet, and your text is kept.",
+      "duration": 10.22
+    },
+    {
+      "id": "outro",
+      "start": 154.0,
+      "window": 4.4,
+      "text": "Try KaamSet today.",
+      "duration": 1.41
+    }
+  ]
+}
