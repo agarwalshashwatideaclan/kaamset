@@ -110,6 +110,13 @@ Built as a purely additive change: `src/speech.ts`, `src/components/MicButton.ts
 - Staging `kaamset-next`, fresh browser: add work (₹720/₹300), explain earnings (16.0 s, a cold first call), grievance draft (3.3 s, ₹300), safety in Punjabi (3.9 s, mic button visible), offline reopen. All passed.
 - **Real-device dictation:** the user confirmed Hindi dictation works on their Android phone with the first build. Their feedback (no recording indicator; the mic scrolled out of view) led to the centre nav mic and the recording sheet. The sheet was checked at 320 and 390 px in emulation.
 
+**Promoted to production** (`kaamset`, version `8d2a0c97-a06e-4243-b4c2-1598c899350b`). Fresh-browser re-check of the live URL:
+- `/api/health` OK; `Permissions-Policy: microphone=(self)`; `/api/nope` → JSON 404.
+- Add work → ₹720 net.
+- Grievance draft (real Gemini) in 3.3 s, asks for ₹300.
+- The center nav mic shows the recording sheet, and dictation (fake recognition) opens Ask with the text.
+- The `/saved` deep link loads.
+
 ## Not tested / limitations
 
 - **Android installation: not verified.** On the Android emulator (Pixel 6 AVD, API 34, Chrome 113), the public URL loaded over HTTPS and rendered the Today screen. The service-worker update banner ("A new version is ready") appeared after a redeploy. Chrome 113 on the emulator then crashed repeatedly in its GPU process (`CompositorGpuThread` SIGSEGV, also with `--disable-gpu`), so the "Install app" flow could not be exercised. Not tested on a physical device. Manifest fields, icon sizes (192/512/maskable) and SW control were verified in desktop Chromium.
